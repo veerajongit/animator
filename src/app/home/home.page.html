@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Animate CSS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <h1 [class]="classhere" id="animatediv">Animate.css</h1>
+  </div>
+  <div class="list">
+    <ion-item>
+      <ion-label>Animation Style</ion-label>
+      <ion-select [(ngModel)]="animatetype" (ionChange)="animate()">
+        <ion-select-option value="bounce">Bounce</ion-select-option>
+        <ion-select-option value="flash">Flash</ion-select-option>
+        <ion-select-option value="pulse">Pulse</ion-select-option>
+        <ion-select-option value="rubberBand">RubberBand</ion-select-option>
+        <ion-select-option value="shake">Shake</ion-select-option>
+        <ion-select-option value="swing">Swing</ion-select-option>
+        <ion-select-option value="tada">Tada</ion-select-option>
+        <ion-select-option value="wobble">Wobble</ion-select-option>
+        <ion-select-option value="jello">Jello</ion-select-option>
+        <ion-select-option value="bounceIn">BounceIn</ion-select-option>
+        <ion-select-option value="bounceInDown">BounceInDown</ion-select-option>
+        <ion-select-option value="bounceInLeft">BounceInLeft</ion-select-option>
+        <ion-select-option value="bounceInRight">BounceInRight</ion-select-option>
+        <ion-select-option value="bounceInUp">BounceInUp</ion-select-option>
+        <ion-select-option value="bounceOut">BounceOut</ion-select-option>
+        <ion-select-option value="bounceOutDown">BounceOutDown</ion-select-option>
+        <ion-select-option value="bounceOutLeft">BounceOutLeft</ion-select-option>
+        <ion-select-option value="bounceOutRight">BounceOutRight</ion-select-option>
+        <ion-select-option value="bounceOutUp">BounceOutUp</ion-select-option>
+        <ion-select-option value="fadeIn">FadeIn</ion-select-option>
+        <ion-select-option value="fadeInDown">FadeInDown</ion-select-option>
+        <ion-select-option value="fadeInDownBig">FadeInDownBig</ion-select-option>
+        <ion-select-option value="fadeInLeft">FadeInLeft</ion-select-option>
+        <ion-select-option value="fadeInLeftBig">FadeInLeftBig</ion-select-option>
+        <ion-select-option value="fadeInRight">FadeInRight</ion-select-option>
+        <ion-select-option value="fadeInRightBig">FadeInRightBig</ion-select-option>
+        <ion-select-option value="fadeInUp">FadeInUp</ion-select-option>
+        <ion-select-option value="fadeInUpBig">FadeInUpBig</ion-select-option>
+        <ion-select-option value="fadeOut">FadeOut</ion-select-option>
+        <ion-select-option value="fadeOutDown">FadeOutDown</ion-select-option>
+        <ion-select-option value="fadeOutDownBig">FadeOutDownBig</ion-select-option>
+        <ion-select-option value="fadeOutLeft">FadeOutLeft</ion-select-option>
+        <ion-select-option value="fadeOutLeftBig">FadeOutLeftBig</ion-select-option>
+        <ion-select-option value="fadeOutRight">FadeOutRight</ion-select-option>
+        <ion-select-option value="fadeOutRightBig">FadeOutRightBig</ion-select-option>
+        <ion-select-option value="fadeOutUp">FadeOutUp</ion-select-option>
+        <ion-select-option value="fadeOutUpBig">FadeOutUpBig</ion-select-option>
+        <ion-select-option value="flip">Flip</ion-select-option>
+        <ion-select-option value="flipInX">FlipInX</ion-select-option>
+        <ion-select-option value="flipInY">FlipInY</ion-select-option>
+        <ion-select-option value="flipOutX">FlipOutX</ion-select-option>
+        <ion-select-option value="flipOutY">FlipOutY</ion-select-option>
+        <ion-select-option value="lightSpeedIn">LightSpeedIn</ion-select-option>
+        <ion-select-option value="lightSpeedOut">LightSpeedOut</ion-select-option>
+        <ion-select-option value="rotateIn">RotateIn</ion-select-option>
+        <ion-select-option value="rotateInDownLeft">RotateInDownLeft</ion-select-option>
+        <ion-select-option value="rotateInDownRight">RotateInDownRight</ion-select-option>
+        <ion-select-option value="rotateInUpLeft">RotateInUpLeft</ion-select-option>
+        <ion-select-option value="rotateInUpRight">RotateInUpRight</ion-select-option>
+        <ion-select-option value="rotateOut">RotateOut</ion-select-option>
+        <ion-select-option value="rotateOutDownLeft">RotateOutDownLeft</ion-select-option>
+        <ion-select-option value="rotateOutDownRight">RotateOutDownRight</ion-select-option>
+        <ion-select-option value="rotateOutUpLeft">RotateOutUpLeft</ion-select-option>
+        <ion-select-option value="rotateOutUpRight">RotateOutUpRight</ion-select-option>
+        <ion-select-option value="slideInUp">SlideInUp</ion-select-option>
+        <ion-select-option value="slideInDown">SlideInDown</ion-select-option>
+        <ion-select-option value="slideInLeft">SlideInLeft</ion-select-option>
+        <ion-select-option value="slideInRight">SlideInRight</ion-select-option>
+        <ion-select-option value="slideOutUp">SlideOutUp</ion-select-option>
+        <ion-select-option value="slideOutDown">SlideOutDown</ion-select-option>
+        <ion-select-option value="slideOutLeft">SlideOutLeft</ion-select-option>
+        <ion-select-option value="slideOutRight">SlideOutRight</ion-select-option>
+        <ion-select-option value="zoomIn">ZoomIn</ion-select-option>
+        <ion-select-option value="zoomInDown">ZoomInDown</ion-select-option>
+        <ion-select-option value="zoomInLeft">ZoomInLeft</ion-select-option>
+        <ion-select-option value="zoomInRight">ZoomInRight</ion-select-option>
+        <ion-select-option value="zoomInUp">ZoomInUp</ion-select-option>
+        <ion-select-option value="zoomOut">ZoomOut</ion-select-option>
+        <ion-select-option value="zoomOutDown">ZoomOutDown</ion-select-option>
+        <ion-select-option value="zoomOutLeft">ZoomOutLeft</ion-select-option>
+        <ion-select-option value="zoomOutRight">ZoomOutRight</ion-select-option>
+        <ion-select-option value="zoomOutUp">ZoomOutUp</ion-select-option>
+        <ion-select-option value="hinge">Hinge</ion-select-option>
+        <ion-select-option value="jackInTheBox">JackInTheBox</ion-select-option>
+        <ion-select-option value="rollIn">RollIn</ion-select-option>
+        <ion-select-option value="rollOut">RollOut</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-button color="primary" (click)="animate()" [disabled]="animatetype == ''">
+      Animate it
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button class="secondary" (click)="visitrepo()">
+    Visit Repository
+  </ion-button>
+</ion-footer>
