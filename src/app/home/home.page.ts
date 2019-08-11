@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free/ngx';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -14,12 +15,17 @@ export class HomePage implements OnInit {
   classhere = '';
   constructor(
     private iab: InAppBrowser,
-    private admobFree: AdMobFree
+    private admobFree: AdMobFree,
+    private platform: Platform
   ) { }
 
   ngOnInit() {
     this.setListener();
-    this.loadAd();
+    this.platform.ready().then(() => {
+      if (this.platform.is('cordova')) {
+        this.loadAd();
+      }
+    });
   }
 
   setListener() {
